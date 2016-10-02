@@ -1,0 +1,11 @@
+{
+    "id": "{EDB1C780-21F5-4BB3-A4E0-0F67A2927495}",
+    "name": "FireTV",
+    "type": 3,
+    "vendor": "Amazon",
+    "aliases": ["Amazon FireTV"],
+    "parentRequirements": ["{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}"],
+    "childRequirements": ["{3316E15E-78B7-4A79-B8D2-DD68DE42B766}"],
+    "implemented": ["{018EF6B5-AB94-40C6-AA53-46943E824ACF}"],
+    "prefix": "FireTV"
+}
