@@ -6,7 +6,17 @@
                     "name": "IPFireTV",
                     "type": "ValidationTextBox",
                     "caption": "IP FireTV"
-                }
+                },
+				{ "type": "Label", "label": "operation system from the IP-Symcon computer" },
+				{ "type": "Select", "name": "system", "caption": "operation system",
+					"options": [
+						{ "label": "Linux (Raspberry)", "value": 0 },
+						{ "label": "Windows", "value": 1 }
+					]
+				},
+				{ "type": "Label", "label": "only for windows computers:" },
+				{ "type": "Label", "label": "folder adbtools" },
+				{ "type": "ValidationTextBox", "name": "folder", "caption": "adbtools" }
             ],
 	"actions":
 			[

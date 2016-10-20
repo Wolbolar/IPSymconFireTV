@@ -13,6 +13,8 @@ class FireTV extends IPSModule
         //You cannot use variables here. Just static values.
 		
         $this->RegisterPropertyString("IPFireTV", "");
+		$this->RegisterPropertyInteger("system", 0);
+		$this->RegisterPropertyString("folder", "C:\\adb-tools\\");
     }
 
     public function ApplyChanges()
@@ -84,9 +86,20 @@ class FireTV extends IPSModule
 	public function StartADB()
 	{
 		$ip = $this->ReadPropertyString('IPFireTV');
-		shell_exec("adb start-server");  //Start Server
-		IPS_Sleep(1500);
-		shell_exec("adb connect ".$ip);  //Connect FireTV 
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb start-server");  //Start Server
+			IPS_Sleep(1500);
+			shell_exec("adb connect ".$ip);  //Connect FireTV 
+		}
+		elseif ($ios == 1)//Windows
+		{
+			shell_exec($folder."adb start-server");  //Start Server
+			IPS_Sleep(1500);
+			shell_exec($folder."adb connect ".$ip);  //Connect FireTV 
+		}
 	}
 	
 	protected function GetOS()
@@ -96,57 +109,156 @@ class FireTV extends IPSModule
 	
 	public function Up()
 	{
-		shell_exec("adb shell input keyevent 19");  //Up
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 19");  //Up
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 19");
+		}
 	}
 	
 	public function Down()
 	{
-		shell_exec("adb shell input keyevent 20");  //Down
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 20");  //Down
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 20");
+		}	
 	}
 	
 	public function Left()
 	{
-		shell_exec("adb shell input keyevent 21");  //Left
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 21");  //Left
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 21");
+		}	
 	}
 	
 	public function Right()
 	{
-		shell_exec("adb shell input keyevent 22");  //Right
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 22");  //Right
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 22");
+		}	
 	}
 	
 	public function Enter()
 	{
-		shell_exec("adb shell input keyevent 66");  //Enter
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 66");  //Enter
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 66");
+		}	
 	}
 	
 	public function Back()
 	{
-		shell_exec("adb shell input keyevent 4");  //Back
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 4");  //Back
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 4");
+		}
 	}
 	
 	public function Home()
 	{
-		shell_exec("adb shell input keyevent 3");  //Home
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 3");  //Home
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 3");
+		}
 	}
 	
 	public function Menu()
 	{
-		shell_exec("adb shell input keyevent 1");  //Menu
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 1");  //Menu
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 1");
+		}	
 	}
 	
 	public function Play()
 	{
-		shell_exec("adb shell input keyevent 85");  //Play / Pause
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 85");  //Play / Pause
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 85");
+		}		
 	}
 	
 	public function Previous()
 	{
-		shell_exec("adb shell input keyevent 88");  //Previous
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 88");  //Previous
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 88");
+		}
 	}
 	
 	public function Next()
 	{
-		shell_exec("adb shell input keyevent 87");  //Next
+		$os = $this->ReadPropertyInteger('system');
+		$folder = $this->ReadPropertyString('folder');
+		if ($os == 0)
+		{
+			shell_exec("adb shell input keyevent 87");  //Next
+		}
+		elseif($os == 1)
+		{
+			shell_exec($folder."adb shell input keyevent 87");
+		}
 	}
 	
 	public function RequestAction($Ident, $Value)
