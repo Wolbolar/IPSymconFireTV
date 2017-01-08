@@ -1,5 +1,5 @@
 <?
-// Modul für Doorbird
+// Modul für FireTV
 
 class FireTV extends IPSModule
 {

@@ -1,5 +1,7 @@
 {
     "id": "{EDB1C780-21F5-4BB3-A4E0-0F67A2927495}",
+	"title": "Amazon FireTV Instanz",
+	"description": "Instanz um mit Hilfe von ADB Remote Steuerungs Befehle an Amazon FireTV zu schicken, es wird zusätzlich ein installiertes ADB benötigt und aktivieres ADB Debugging im FireTV",
     "name": "FireTV",
     "type": 3,
     "vendor": "Amazon",
