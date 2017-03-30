@@ -94,7 +94,7 @@ class FireTV extends IPSModule
 			IPS_Sleep(1500);
 			shell_exec("adb connect ".$ip);  //Connect FireTV 
 		}
-		elseif ($ios == 1)//Windows
+		elseif ($os == 1)//Windows
 		{
 			shell_exec($folder."adb start-server");  //Start Server
 			IPS_Sleep(1500);
