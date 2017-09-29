@@ -16,7 +16,9 @@
 				},
 				{ "type": "Label", "label": "only for windows computers:" },
 				{ "type": "Label", "label": "folder adbtools" },
-				{ "type": "ValidationTextBox", "name": "folder", "caption": "adbtools" }
+				{ "type": "ValidationTextBox", "name": "folder", "caption": "adbtools" },
+                { "type": "Label", "label": "__________________________________________________________________________________________________" },
+                { "type": "CheckBox", "name": "alternative_menu", "caption": "Alternative menu command" }
             ],
 	"actions":
 			[
