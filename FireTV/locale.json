@@ -27,8 +27,11 @@
 			"Next": "Vor",
 			"Creating instance.": "Die Instanz wird erstellt.",
 			"FireTV ok": "FireTV ok",
+			"Category for scripts": "Kategorie für Skripte:",
+			"Script category": "Skript Kategorie",
 			"interface closed.": "Interface geschlossen.",
 			"FireTV IP adress must not empty.": "FireTV IP Adresse darf nicht leer sein.",
+			"FireTV script category must not empty.": "FireTV Skript Kategorie darf nicht leer sein.",
 			"No valid IP adress.": "Keine gültige IP Adresse.",
 			"connection to ADB lost.": "Verbindung zum ADB verloren.",
 			"field must not be empty.": "Felder dürfen nicht leer sein."
