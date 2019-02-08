@@ -1,12 +1,13 @@
 {
 	"id": "{1ABADBBF-E05C-40D1-A7D7-494983AB564D}",
-	"description": "Amazon FireTV Modul",
-	"tags": "FireTV",
-	"req_ips_version": "4.0",
 	"author": "Fonzo",
 	"name": "FireTV",
 	"url": "www.amazon.com",
+	"compatibility": {
+		"version": "4.2",
+		"date": 1491343200
+	},
 	"version": "0.9",
-	"build": 0,
+	"build": 1,
 	"date": 0
 }
