@@ -4,7 +4,7 @@
 	"name": "FireTV",
 	"url": "www.amazon.com",
 	"compatibility": {
-		"version": "4.2",
+		"version": "5.1",
 		"date": 1491343200
 	},
 	"version": "0.9",

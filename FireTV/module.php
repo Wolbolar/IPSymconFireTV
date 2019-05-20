@@ -1,4 +1,4 @@
-<?
+<?php
 // Modul für FireTV
 
 class FireTV extends IPSModule
@@ -801,5 +801,3 @@ FireTV_' . $Method . '(' . $this->InstanceID . ');
 	}
 
 }
-
-?>
